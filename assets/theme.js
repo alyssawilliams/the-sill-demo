@@ -6767,7 +6767,7 @@ theme.Product = (function() {
       this.$cartCount = this.$cartCount || $(this.selectors.cartCount);
 
       this.$cartCountBubble.removeClass(this.classes.hidden);
-      this.$cartCount.text(quantity);
+      this.$cartCount.text('Bag (' + quantity + ')');
     },
 
     _showCartPopup: function() {
