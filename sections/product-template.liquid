@@ -157,13 +157,14 @@
                     {% unless current_variant.available %}
                       {{ 'products.product.sold_out' | t }}
                     {% else %}
-                      {{ 'products.product.add_to_cart' | t }}
+                      {{ price | money }} - {{ 'products.product.add_to_cart' | t }}
                     {% endunless %}
                   </span>
                   <span class="hide" data-loader>
                     {% include 'icon-spinner' %}
                   </span>
                 </button>
+                <span class="shipping-info">Flat rate standard shipping; free over $75.</span>
                 {% if section.settings.enable_payment_button %}
                   {{ form | payment_button }}
                 {% endif %}
