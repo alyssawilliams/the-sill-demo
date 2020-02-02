@@ -7009,11 +7009,12 @@ theme.Product = (function() {
 
       if (variant) {
         if (variant.available) {
+          var variantPrice = theme.Currency.formatMoney(variant.price, theme.moneyFormat);
           this.$addToCart
             .removeAttr('aria-disabled')
             .attr('aria-label', theme.strings.addToCart);
           $(this.selectors.addToCartText, this.$container).text(
-            theme.strings.addToCart
+            variantPrice + "-" + theme.strings.addToCart
           );
           $(this.selectors.productForm, this.container).removeClass(
             this.classes.variantSoldOut

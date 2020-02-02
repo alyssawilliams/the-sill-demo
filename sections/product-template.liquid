@@ -152,7 +152,8 @@
                   {% unless current_variant.available %} aria-disabled="true"{% endunless %}
                   aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
                   class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}"
-                  data-add-to-cart>
+                  data-add-to-cart
+                  data-price="{{ price | money }}">
                   <span data-add-to-cart-text>
                     {% unless current_variant.available %}
                       {{ 'products.product.sold_out' | t }}

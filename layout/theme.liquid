@@ -103,7 +103,7 @@
   {%- endif -%}
 
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
-  <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'vendor.js' | asset_url }}"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
   {{ content_for_header }}
@@ -135,5 +135,7 @@
     <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
     <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
   </ul>
+
+  {% include 'linked-options' %}
 </body>
 </html>
