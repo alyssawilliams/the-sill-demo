@@ -2,6 +2,7 @@
 $sill-black: #2d2a24;
 $sill-grey: #6c6965;
 $sill-grey-light: #bfb8af;
+$sill-block-background: #f3f3f2;
 
 // PRODUCT GRID
 .product-single {
@@ -80,5 +81,34 @@ $sill-grey-light: #bfb8af;
       left: -20%;
       transform: rotate(90deg);
     }
+  }
+}
+
+// THE STITCH MILL BLOCK
+.the-stitch-mill-container {
+  background-color: $sill-block-background;
+  background-image: url('vendor-leaf-blue.png'),
+                    url('vendor-leaf-green.png');
+  background-repeat: no-repeat;
+  background-size: 220px, 340px;
+  background-position: left 8% top 25%, right 5% bottom;
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+
+  .header {
+    text-transform: none;
+    font-size: 1.4em;
+    letter-spacing: -0.1px;
+  }
+
+  .inner {
+    padding: 70px 60px;
+    width: 810px;
+    background-color: #fff;
+  }
+
+  .blurb:not(:last-of-type) {
+    margin-bottom: 20px;
   }
 }

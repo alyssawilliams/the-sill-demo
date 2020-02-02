@@ -199,6 +199,8 @@
   </div>
 </div>
 
+{% include 'the-stitch-mill' %}
+
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">
     {{ product | json }}
