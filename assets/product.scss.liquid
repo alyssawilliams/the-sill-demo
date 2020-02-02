@@ -66,11 +66,19 @@ $sill-grey-light: #bfb8af;
   font-size: .7em;
 }
 
-.product-template__container:before {
-  content: 'It’s okay to be basic.';
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  left: 0;
-  transform: rotate(90deg);
+// Tablet and up
+@media screen and (min-width: 768px) {
+  .product-single__media-group {
+    position: relative;
+    height: 0%;
+
+    &:before {
+      content: 'It’s okay to be basic.';
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: -20%;
+      transform: rotate(90deg);
+    }
+  }
 }
