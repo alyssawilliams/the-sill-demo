@@ -83,6 +83,10 @@ $tablet-up: 768px;
   }
 }
 
+.product-form__item--submit {
+  flex-basis: 210px;
+}
+
 .btn {
   text-transform: none;
 }
@@ -153,7 +157,7 @@ $tablet-up: 768px;
   .question-and-answer {
     cursor: pointer;
   }
-  
+
   .question-and-answer:not(:last-of-type) {
     border-bottom: 1px solid $sill-grey-light;
   }
@@ -166,8 +170,9 @@ $tablet-up: 768px;
   }
 
   .answer {
-    padding-bottom: 25px;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: .075s;
   }
 
   .read-more {
@@ -177,7 +182,7 @@ $tablet-up: 768px;
 
     font-weight: 600;
     display: block;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
@@ -189,11 +194,18 @@ $tablet-up: 768px;
     top: 16px;
     right: 0;
     font-size: 1.5em;
+    transition: .05s;
   }
 
   &.open .question:after {
     content: '+';
-    font-size: 1.2em;
     top: 20px;
+    font-size: 1.2em;
+  }
+
+   &.open .answer {
+    display: block;
+    height: auto;
+    margin-bottom: 25px;
   }
 }
