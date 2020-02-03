@@ -8,6 +8,7 @@ $sill-green: #00ab84;
 // SIZES
 $tablet-up: 768px;
 
+
 // PRODUCT GRID
 @media screen and (min-width: $tablet-up) {
   .product-single {
@@ -21,6 +22,7 @@ $tablet-up: 768px;
     padding-left: 50px;
   }
 }
+
 
 // PRODUCT INFO
 .product-single__title {
@@ -105,6 +107,7 @@ $tablet-up: 768px;
   }
 }
 
+
 // THE STITCH MILL BLOCK
 .the-stitch-mill-container {
   background-color: $sill-block-background;
@@ -131,5 +134,66 @@ $tablet-up: 768px;
 
   .blurb:not(:last-of-type) {
     margin-bottom: 20px;
+  }
+}
+
+
+// FAQ BLOCK
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 55px;
+
+  .header {
+    font-size: 2.5em;
+    text-transform: none;
+    letter-spacing: 0.5px;
+  }
+
+  .question-and-answer {
+    cursor: pointer;
+  }
+  
+  .question-and-answer:not(:last-of-type) {
+    border-bottom: 1px solid $sill-grey-light;
+  }
+
+  .question {
+    font-size: 1em;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .answer {
+    padding-bottom: 25px;
+    display: none;
+  }
+
+  .read-more {
+    &, &:hover {
+      color: $sill-green;
+    }
+
+    font-weight: 600;
+    display: block;
+    margin-top: 40px;
+  }
+}
+
+// Toggle
+.question-and-answer {  
+  .question:after {
+    content: '-';
+    position: absolute;
+    top: 16px;
+    right: 0;
+    font-size: 1.5em;
+  }
+
+  &.open .question:after {
+    content: '+';
+    font-size: 1.2em;
+    top: 20px;
   }
 }
